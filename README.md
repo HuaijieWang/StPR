@@ -76,3 +76,14 @@ python train.py --config configs/hmdb51.yaml --num-tasks 26 --output outputs/hmd
 ```
 
 For 10-task Kinetics-400, set `num_tasks: 10`, `base_classes: 40`, and `pivot_split: data/splits/Kinetics400_data_tasks_10.pkl` in its configuration before training.
+
+## Citation
+
+```bibtex
+@inproceedings{wang2026stpr,
+  title={{StPR}: Spatiotemporal Preservation and Routing for Exemplar-Free Video Class-Incremental Learning},
+  author={Wang, Huaijie and Cheng, De and Li, Guozhang and Xu, Zhipeng and He, Lingfeng and Li, Jie and Wang, Nannan and Gao, Xinbo},
+  booktitle={International Conference on Learning Representations},
+  year={2026}
+}
+```
