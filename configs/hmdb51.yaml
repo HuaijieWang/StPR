@@ -1,0 +1,31 @@
+gpu: 0
+batch_size: 40
+epochs: 30
+lr: 0.01
+num_workers: 8
+num_frames: 8
+logit_scale: 20
+spatial_logit_scale: 50
+fssd_weight: 2000000.0
+temporal_fusion_weight: 1
+spatial_fusion_weight: 1
+double_base_epochs: true
+text_prompt: false
+clip_model: ViT-B/16
+adapter_bottleneck: 64
+adapter_scale: 0.1
+adapter_dropout: 0.1
+spatiotemporal:
+  dim: 512
+  heads: 2
+  layers: 3
+dataset:
+  name: HMDB51
+  num_classes: 51
+  num_tasks: 6
+  base_classes: 26
+  seed: 99
+  train_list: data/hmdb51/trainlist02.txt
+  test_list: data/hmdb51/testlist02.txt
+  frames: data/hmdb51/frames
+statistics_eval_mode: false

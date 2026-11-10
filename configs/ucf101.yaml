@@ -1,0 +1,30 @@
+gpu: 0
+batch_size: 40
+epochs: 30
+lr: 0.01
+num_workers: 4
+num_frames: 8
+logit_scale: 20
+spatial_logit_scale: 50
+fssd_weight: 200000.0
+temporal_fusion_weight: 3
+spatial_fusion_weight: 2
+double_base_epochs: true
+text_prompt: false
+clip_model: ViT-B/16
+adapter_bottleneck: 64
+adapter_scale: 0.1
+adapter_dropout: 0.1
+spatiotemporal:
+  dim: 512
+  heads: 2
+  layers: 3
+dataset:
+  name: UCF101
+  num_classes: 101
+  num_tasks: 6
+  base_classes: 51
+  # Task order and video assignments follow PIVOT/vCLIMB.
+  pivot_split: data/splits/UCF101_data.pkl
+  frames: data/ucf101/frames
+statistics_eval_mode: true

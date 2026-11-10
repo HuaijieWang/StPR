@@ -1,0 +1,6 @@
+StPR includes adapted OpenAI CLIP code in clip/ (MIT License, clip/LICENSE).
+The RGB frame sampling and group transforms in stpr/dataset.py and
+stpr/transforms.py are adapted from TSM (Copyright MIT HAN Lab, Apache-2.0,
+licenses/TSM.txt), with StPR-specific data handling and interface changes.
+The transformer layer in stpr/spatiotemporal.py is adapted from PyTorch
+(BSD-3-Clause, licenses/PyTorch.txt).

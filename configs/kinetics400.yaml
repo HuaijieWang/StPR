@@ -1,0 +1,31 @@
+gpu: 0
+batch_size: 40
+epochs: 30
+lr: 0.01
+num_workers: 4
+num_frames: 8
+logit_scale: 20
+spatial_logit_scale: 50
+fssd_weight: 200000.0
+temporal_fusion_weight: 1
+spatial_fusion_weight: 1
+double_base_epochs: false
+text_prompt: true
+clip_model: ViT-B/16
+adapter_bottleneck: 64
+adapter_scale: 0.1
+adapter_dropout: 0.1
+spatiotemporal:
+  dim: 512
+  heads: 2
+  layers: 3
+dataset:
+  name: Kinetics400
+  num_classes: 400
+  num_tasks: 20
+  base_classes: 20
+  # Task order and video assignments follow PIVOT/vCLIMB.
+  pivot_split: data/splits/Kinetics400_data_tasks_20.pkl
+  frames_train: data/kinetics400/train
+  frames_test: data/kinetics400/test
+statistics_eval_mode: false
